@@ -15,9 +15,15 @@ base case is if string.length === 1 return
 ***********************************************************************/
 
 
-function reverse(str){}
+function reverse(string) {
 
+  if (string.length === 0) return "" //base case
 
+  return string[string.length - 1] + reverse(string.slice(0, -1))
+  //takes everything from beginning and excludes last index
+}
+
+console.log(reverse("house")); // "esuoh"
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
